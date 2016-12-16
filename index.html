@@ -1,16 +1,348 @@
 <!DOCTYPE html>
 <html lang="zh-CN">
     <head>
+
+        <!--仿写网站：https://justcall.io/-->
+
         <title>Hellow Bootstrap</title>
         <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
         <link href="lib/css/bootstrap.min.css" rel="stylesheet">
+        <link rel="stylesheet" href="lib/css/font-awesome.min.css">
+        <link href="main.css" rel="stylesheet">
     </head>
     <body>
-        Hellow Bootstrap
+        <div id="page">
+            <!--导航条-->
+            <nav id="myNavbar" class="navbar navbar-default navbar-fixed-top" role="navigation">
+                <img src="img/beta-logo.png" alt="beta-logo" height="48" class="beta_img">
+                <div class="container">
+
+                    <a id="topLogo" class="navbar-brand" data-href="page1">
+                        <img src="img/logo-desktop.png" class="desktop_img" width="100" alt="logo-desktop">
+                    </a>
+
+                    <ul id="navUl" class="nav navbar-nav navbar-left">
+                        <li data-href="page1"><a class="navbar-brand">开头</a></li>
+                        <li data-href="page2"><a class="navbar-brand">第二模块</a></li>
+                        <li data-href="page3"><a class="navbar-brand">第三模块</a></li>
+                        <li data-href="page4"><a class="navbar-brand">第四模块</a></li>
+                        <li data-href="page5"><a class="navbar-brand">结尾</a></li>
+                    </ul>
+                    
+                    <ul class="nav navbar-nav navbar-right">
+                        <li>
+                            <button type="button" id="btn1" class="btn btn-primary navbar-btn clickBtn">多多指教</button>
+                            <button type="button" id="btn2" class="btn navbar-btn disabled mlBtn">不能点的按钮</button>
+
+                            <div type="button" id="btn3" class="btn btn-color callBtn clickBtn" data-toggle="modal" data-target="#myModal">
+                                <span class="glyphicon glyphicon-earphone"></span>
+                            </div>
+                        </li>
+                    </ul>
+
+                </div>
+            </nav>
 
 
+
+            <!--第一模块-->
+            <div class="pageImg" id="page1">
+                <div class="page1">
+                    <div class="page1_head">
+                        <div class="text-center">
+                            <h2>早就听说BootStrap了,但一直没有机会用过,这次正好用它写个Demo玩玩,学习下</h2>
+                        </div>
+                        <div class="text-center text-info mt3">
+                            <h4>
+                                这是仿写一个随便找的国外的网站,时间有限我就只做这一个页面啦
+                                <abbr title="猜猜我在笑什么~">哈哈</abbr>
+                            </h4>
+                        </div>
+                        <div class="text-center mt3">
+                            <button type="button" id="btn4" class="btn btn-lg btn-info btn3 clickBtn">我的博客</button>
+                            <button type="button" id="btn5" class="btn btn-lg btn-default btn4 clickBtn">github</button>
+                        </div>
+                        <div id="nowDate" class="text-center mt2">
+                            <!--  插入当前浏览时间  -->
+                        </div>
+
+                        <div class="text-center">
+                            <img src="img/hero-devices-22-snow.png" data-move="false" class="snowImg myMoveImg">
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!--第二模块-->
+            <div class="container-fluid page2" id="page2">
+                <div class="text-center myTip">
+                    <h2>最近研究研究ES6，等这些都弄完了就着手做个Angular的小项目吧</h2>
+                </div>
+                <div class="row text-center myIcon">
+                    <div class="col-md-3">
+                        <a class="icon-lg icon-color" href="https://angularjs.org/">
+                            <span class="glyphicon glyphicon-font"></span>
+                        </a>
+                        <h4>AngularJS</h4>
+                    </div>
+                    <div class="col-md-3">
+                        <a class="icon-lg icon-color" href="http://reactnative.cn/">
+                            <span class="glyphicon glyphicon-registration-mark"></span>
+                        </a>
+                        <h4>React</h4>
+                    </div>
+                    <div class="col-md-3">
+                        <a class="icon-lg icon-color" href="http://cn.vuejs.org/">
+                            <span class="glyphicon glyphicon-leaf"></span>
+                        </a>
+                        <h4>Vue</h4>
+                    </div>
+                    <div class="col-md-3">
+                        <a class="icon-lg icon-color" href="http://backbonejs.org/">
+                            <span class="glyphicon glyphicon-bold"></span>
+                        </a>
+                        <h4>Backbone</h4>
+                    </div>
+                </div>
+            </div>
+
+
+            <!--第三模块-->
+            <div class="container-fluid text-center page3" id="page3">
+                <div class="myTip">
+                    <h1>Backbone</h1>
+                    <h4>工作用的是backbone，但感觉市场上用的不多了啊</h4>
+                </div>
+                <div class="myBtn">
+                    <a class="btn1" href="https://www.google.com.hk/?gws_rd=ssl">
+                        <img src="img/apply.png" width="136">
+                    </a>
+                    <a class="btn1 btn2" href="https://www.google.com.hk/?gws_rd=ssl">
+                        <img src="img/google-play-badge.png" width="136">
+                    </a>
+                </div>
+                <div class="myBtn">
+                    <img src="img/download-device-1.png" width="730" class="phoneLogo myMoveImg" data-move="false">
+                </div>
+            </div>
+
+             <!--第四模块-->
+            <div class="container-fluid page4" id="page4">
+
+                <div class="text-center myTip">
+                    <h2>Use Carousel</h2>
+                </div>
+                
+                <div id="carousel-example-generic" class="carousel slide lbDiv" data-ride="carousel">
+                    <!-- Indicators -->
+                    <ol class="carousel-indicators">
+                        <li data-target="#carousel-example-generic" data-slide-to="0" class="active"></li>
+                        <li data-target="#carousel-example-generic" data-slide-to="1"></li>
+                        <li data-target="#carousel-example-generic" data-slide-to="2"></li>
+                    </ol>
+
+                    <!-- Wrapper for slides -->
+                    <div class="carousel-inner" role="listbox">
+                        <div class="item active">
+                            <div class="everyDiv">
+                                <!--<img src="" alt="">-->
+                                <div class="carousel-caption">
+                                    <h4 class="fontColor">哈哈哈</h4>
+                                    <p>
+                                        <small>第一个轮播页面</small>
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="item">
+                            <div class="everyDiv">
+                                <!--<img src="" alt="">-->
+                                <div class="carousel-caption">
+                                    <h4 class="fontColor">呵呵呵</h4>
+                                    <p>
+                                        <small>第二个轮播页面</small>
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="item">
+                            <div  class="everyDiv">
+                                <!--<img src="" alt="">-->
+                                <div class="carousel-caption">
+                                    <h4 class="fontColor">嘿嘿嘿</h4>
+                                    <p>
+                                        <small>第三个轮播页面</small>
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <a class="left carousel-control" href="#carousel-example-generic" role="button" data-slide="prev">
+                        <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+                        <span class="sr-only">上一个</span>
+                    </a>
+                    <a class="right carousel-control" href="#carousel-example-generic" role="button" data-slide="next">
+                        <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+                        <span class="sr-only">下一个</span>
+                    </a>
+                </div>
+            </div>
+
+            <!--第五模块-->
+            <div class="page5" id="page5">
+                <div class="container">
+                    <div class="row myTip">
+                        <div class="col-md-3">
+                            <div>
+                                <h4 class="myTitle">Get International Numbers</h4>
+                            </div>
+                            <p>
+                                <a class="aLink" href="https://www.google.com.hk/?gws_rd=ssl">Get a phone number in US</a>
+                            </p>
+                            <p>
+                                <a class="aLink" href="https://www.google.com.hk/?gws_rd=ssl">Get a phone number in US</a>
+                            </p>
+                            <p>
+                                <a class="aLink" href="https://www.google.com.hk/?gws_rd=ssl">Get a phone number in US</a>
+                            </p>
+                            <p>
+                                <a class="aLink" href="https://www.google.com.hk/?gws_rd=ssl">Get a phone number in US</a>
+                            </p>
+                            <p>
+                                <a class="aLink" href="https://www.google.com.hk/?gws_rd=ssl">Get a phone number in US</a>
+                            </p>
+                            <p>
+                                <a class="aLink" href="https://www.google.com.hk/?gws_rd=ssl">Get a phone number in US</a>
+                            </p>
+                            <p>
+                                <a class="aLink" href="https://www.google.com.hk/?gws_rd=ssl">Get a phone number in US</a>
+                            </p>
+                            <p>
+                                <a class="aLink" href="https://www.google.com.hk/?gws_rd=ssl">Get a phone number in US</a>
+                            </p>
+                        
+                        </div>
+                        <div class="col-md-3">
+                            <div>
+                                <h4 class="myTitle">Cheap Call Rates</h4>
+                            </div>
+                            <p>
+                                <a class="aLink" href="https://www.google.com.hk/?gws_rd=ssl">Lowest call rates from US to UK</a>
+                            </p>
+                            <p>
+                                <a class="aLink" href="https://www.google.com.hk/?gws_rd=ssl">Lowest call rates from US to UK</a>
+                            </p>
+                            <p>
+                                <a class="aLink" href="https://www.google.com.hk/?gws_rd=ssl">Lowest call rates from US to UK</a>
+                            </p>
+                            <p>
+                                <a class="aLink" href="https://www.google.com.hk/?gws_rd=ssl">Lowest call rates from US to UK</a>
+                            </p>
+                            <p>
+                                <a class="aLink" href="https://www.google.com.hk/?gws_rd=ssl">Lowest call rates from US to UK</a>
+                            </p>
+                            <p>
+                                <a class="aLink" href="https://www.google.com.hk/?gws_rd=ssl">Lowest call rates from US to UK</a>
+                            </p>
+                        </div>
+                        <div class="col-md-3">
+                            <div>
+                                <h4 class="myTitle">Integrations</h4>
+                            </div>
+                            <p>
+                                <a class="aLink" href="https://www.google.com.hk/?gws_rd=ssl">Pipedrive</a>
+                            </p>
+                            <p>
+                                <a class="aLink" href="https://www.google.com.hk/?gws_rd=ssl">Freshdesk</a>
+                            </p>
+                            <p>
+                                <a class="aLink" href="https://www.google.com.hk/?gws_rd=ssl">Zoho</a>
+                            </p>
+                        </div>
+                        <div class="col-md-3">
+                            <div>
+                                <h4 class="myTitle">Contact Us</h4>
+                            </div>
+                            <p>
+                                <span class="glyphicon glyphicon-map-marker aLink" aria-hidden="true">
+                                    中国 北京 朝阳
+                                </span>
+                            </p>
+                            <p>
+                                <span class="glyphicon glyphicon-envelope aLink" aria-hidden="true">
+                                    2690264652@qq.com
+                                </span>
+                            </p>
+                            <p>
+                                <span class="glyphicon glyphicon-phone aLink" aria-hidden="true">
+                                    15600846290
+                                </span>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            
+            <!--第六模块-->
+            <footer class="page6" id="page6">
+                <div class="container-fluid text-center">
+                    <div>
+                        <ul class="myLogo">
+                            <li><a class="eLogo" href="http://blog.sina.com.cn/u/3189899312" target="_blank"><i class="icon-facebook"></i></a></li>
+                            <li><a class="eLogo" href="http://blog.sina.com.cn/u/3189899312" target="_blank"><i class="icon-twitter"></i></a></li>
+                            <li><a class="eLogo" href="http://blog.sina.com.cn/u/3189899312" target="_blank"><i class="icon-linkedin"></i></a></li>
+                            <li><a class="eLogo" href="http://blog.sina.com.cn/u/3189899312" target="_blank"><i class="icon-google-plus"></i></a></li>
+                            <li><a class="eLogo" href="http://blog.sina.com.cn/u/3189899312" target="_blank"><i class="icon-github"></i></a></li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="container-fluid text-center">
+                    <p class="text-light link-white">
+                        <a class="link-white" href="http://blog.sina.com.cn/u/3189899312">Blog</a>
+                        <span class="separator">|</span>
+                        <a class="link-white" href="http://blog.sina.com.cn/u/3189899312">agree</a>
+                        <span class="separator">|</span>
+                        <a class="link-white" href="https://github.com/zccSxx/BootstrapDemo">github</a>
+                        <span class="separator">|</span>
+                        <a class="link-white" href="http://blog.sina.com.cn/u/3189899312">Zhao chen </a> © 2016
+                    </p>
+                </div>
+            </footer>
+
+        </div>
+
+        <!--模态-->
+        <div class="modal fade" id="myModal">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+                    <h4 class="modal-title">电话</h4>
+                </div>
+                <div class="modal-body">
+                    <p>+86 XXX XXXX XXXX</p>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                    <button type="button" class="btn btn-primary">就这些</button>
+                </div>
+                </div>
+            </div>
+        </div>
+
+        <!--回到顶部按钮-->
+        <div id="topButton">
+            <i class="icon-sort-up"></i>
+        </div>
+
+        <!--js引入-->
         <script type="text/javascript" src="lib/js/jquery.min.js"></script>
+        <script type="text/javascript" src="lib/js/jquery.hovertreescroll.js"></script>
         <script type="text/javascript" src="lib/js/bootstrap.min.js"></script>
+        <script type="text/javascript" src="main.js"></script>
     </body>
 </html>
